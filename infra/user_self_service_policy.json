@@ -1,0 +1,30 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ManageOwnPasswordAndKeys",
+      "Effect": "Allow",
+      "Action": [
+        "iam:GetUser",
+        "iam:ChangePassword",
+        "iam:ListAccessKeys",
+        "iam:CreateAccessKey",
+        "iam:UpdateAccessKey",
+        "iam:DeleteAccessKey"
+      ],
+      "Resource": "arn:aws:iam::__ACCOUNT__:user/${aws:username}"
+    },
+    {
+      "Sid": "SeeAccountBasics",
+      "Effect": "Allow",
+      "Action": ["iam:GetAccountPasswordPolicy", "sts:GetCallerIdentity"],
+      "Resource": "*"
+    },
+    {
+      "Sid": "SwitchIntoTheProjectRole",
+      "Effect": "Allow",
+      "Action": "sts:AssumeRole",
+      "Resource": "arn:aws:iam::__ACCOUNT__:role/__ROLE__"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+raw_name,line_name,n_rows,first_seen,last_seen,location_id,station,match
+ADCB,Red Metro Line,34640,2017-01-01,2026-07-11,137,ADCB,exact
+Abu Baker Al Siddique,Green Metro Line,22460,2017-01-01,2026-07-11,167,Abu Baker Al Siddique,exact
+Abu Hail,Green Metro Line,15884,2017-01-01,2026-07-11,166,Abu Hail,exact
+Airport Terminal 1,Red Metro Line,11920,2017-01-01,2026-07-11,131,Airport Terminal 1,exact
+Airport Terminal 3,Red Metro Line,7921,2017-01-01,2026-07-09,130,Airport Terminal 3,exact
+Al Fahidi,Green Metro Line,19112,2017-01-01,2020-11-28,174,Sharaf DG,exact
+Al Furjan,Red Metro Line,3190,2021-02-08,2026-07-11,183,Al Furjan,exact
+Al Furjan,,38,2020-12-28,2021-02-05,183,Al Furjan,exact
+Al Ghubaiba,Green Metro Line,25269,2017-01-01,2026-07-11,173,Al Ghubaiba,exact
+Al Jadaf,Green Metro Line,4956,2017-01-01,2026-07-11,178,Al Jadaf,exact
+Al Jafiliya,Red Metro Line,11682,2017-01-01,2021-08-07,138,max,exact
+Al Khail,Red Metro Line,3258,2020-11-29,2026-07-11,152,Al Khail,inferred
+Al Nahda,Green Metro Line,13478,2017-01-01,2026-07-11,163,Al Nahda,exact
+Al Qiyadah,Green Metro Line,11064,2017-01-01,2026-07-11,165,Al Qiyadah,exact
+Al Qusais,Green Metro Line,9789,2017-01-01,2026-07-11,161,Al Qusais,exact
+Al Ras,Green Metro Line,10597,2017-01-01,2026-07-11,172,Al Ras,exact
+Al Rigga,Red Metro Line,47905,2017-01-01,2026-07-11,134,Al Rigga,exact
+Al Safa,Red Metro Line,6017,2020-11-29,2023-01-07,146,ONPASSIVE,inferred
+Baniyas Square,Green Metro Line,33692,2017-01-01,2026-07-11,170,Baniyas Square,exact
+BurJuman,Red Metro Line,61677,2017-01-01,2026-07-11,136,BurJuman,exact
+Burj Khalifa/ Dubai Mall,Red Metro Line,41534,2017-01-01,2026-07-11,142,Burj Khalifa/ Dubai Mall,exact
+Business Bay,Red Metro Line,35328,2017-01-01,2026-07-11,143,Business Bay,exact
+City Centre Deira,Red Metro Line,12410,2022-04-17,2026-07-11,133,City Centre Deira,inferred
+Creek,Green Metro Line,3898,2017-01-02,2026-07-11,179,Creek,exact
+DAMAC Properties,Red Metro Line,12119,2017-01-01,2020-11-28,153,Sobha Realty,exact
+DMCC,Red Metro Line,27378,2018-08-05,2026-07-11,154,DMCC,exact
+Danube,Red Metro Line,10851,2017-01-01,2026-07-11,158,Danube,exact
+Deira City Centre,Red Metro Line,23828,2017-01-01,2022-04-16,133,City Centre Deira,exact
+Discovery Gardens,Red Metro Line,2801,2021-02-08,2026-07-11,182,Discovery Gardens,exact
+Discovery Gardens,,17,2021-01-04,2021-02-05,182,Discovery Gardens,exact
+Dubai Airport Free Zone,Green Metro Line,16424,2017-01-01,2026-07-11,162,Dubai Airport Free Zone,exact
+Dubai Healthcare City,Green Metro Line,8571,2017-01-02,2026-07-11,177,Dubai Healthcare City,exact
+Dubai Internet City,Red Metro Line,30606,2017-01-01,2026-07-11,151,Dubai Internet City,exact
+Dubai Investment Park,Red Metro Line,6763,2021-06-01,2026-07-11,185,Dubai Investment Park,exact
+Dubai Marina,Red Metro Line,1668,2020-11-29,2021-08-07,153,Sobha Realty,inferred
+EXPO,Red Metro Line,6267,2021-06-06,2026-07-11,187,EXPO,exact
+EXPO,,2,2021-02-09,2021-02-24,187,EXPO,exact
+Emirates,Red Metro Line,10395,2017-01-01,2026-07-11,129,Emirates,exact
+Emirates Towers,Red Metro Line,19832,2017-01-01,2026-07-11,140,Emirates Towers,exact
+Energy,Red Metro Line,1198,2017-01-01,2026-07-11,157,Energy,exact
+Equiti,Red Metro Line,6614,2022-04-17,2026-07-11,148,Equiti,inferred
+Etisalat,Green Metro Line,9487,2017-01-01,2026-07-11,160,Etisalat,exact
+FGB,Red Metro Line,2424,2017-01-01,2017-12-30,148,Equiti,inferred
+Financial Centre,Red Metro Line,17515,2017-01-01,2026-07-11,141,Financial Centre,exact
+First Abu Dhabi Bank,Red Metro Line,6139,2017-12-31,2020-11-28,148,Equiti,exact
+GGICO,Red Metro Line,11641,2017-01-01,2026-07-11,132,GGICO,exact
+Gold Souq,Green Metro Line,9237,2020-03-15,2026-07-11,171,Gold Souq,exact
+Ibn Battuta,Red Metro Line,17248,2017-01-01,2026-07-11,156,Ibn Battuta,exact
+Jabal Ali,Red Metro Line,1057,2021-01-01,2026-07-11,155,Jabal Ali,exact
+Jumeirah Golf Estates,Red Metro Line,708,2021-09-19,2026-07-11,184,Jumeirah Golf Estates,exact
+Jumeirah Golf Estates,,1,2020-12-25,2020-12-25,184,Jumeirah Golf Estates,exact
+Jumeirah Lakes Towers,Red Metro Line,7530,2017-01-01,2018-08-04,154,DMCC,inferred
+Mall of the Emirates,Red Metro Line,41153,2017-01-01,2026-07-11,149,Mall of the Emirates,exact
+Mashreq,Red Metro Line,10684,2020-05-03,2026-07-11,150,Mashreq,exact
+Nakheel,Red Metro Line,3155,2017-01-01,2020-11-28,152,Al Khail,exact
+Nakheel Harbour & Tower,Red Metro Line,226,2017-01-01,2018-01-04,155,Jabal Ali,inferred
+Noor Bank,Red Metro Line,13741,2017-01-01,2020-11-28,146,ONPASSIVE,exact
+ONPASSIVE,Red Metro Line,11095,2023-01-09,2026-07-11,146,ONPASSIVE,inferred
+Oud Metha,Green Metro Line,20753,2017-01-01,2026-07-11,176,Oud Metha,exact
+Palm Deira,Green Metro Line,6544,2017-01-01,2020-05-02,171,Gold Souq,inferred
+Rashidiya,Red Metro Line,14796,2017-01-01,2021-08-07,128,centrepoint,exact
+Salah Al Din,Green Metro Line,25809,2017-01-01,2026-07-11,168,Salah Al Din,exact
+Sharaf DG,Green Metro Line,19236,2020-11-29,2026-07-11,174,Sharaf DG,inferred
+Sharaf DG,Red Metro Line,6627,2017-01-01,2020-05-02,150,Mashreq,inferred
+Sobha Realty,Red Metro Line,13032,2021-08-08,2026-07-11,153,Sobha Realty,inferred
+Stadium,Green Metro Line,30202,2017-01-01,2026-07-11,164,Stadium,exact
+The Gardens,Red Metro Line,6152,2021-02-07,2026-07-10,181,The Gardens,exact
+The Gardens,,46,2021-01-02,2021-02-06,181,The Gardens,exact
+UAE Exchange,Red Metro Line,7144,2017-01-01,2026-07-11,159,UAE Exchange,exact
+Umm Al Sheif,Red Metro Line,2941,2020-11-29,2022-04-16,148,Equiti,inferred
+Union,Red Metro Line,53693,2017-01-01,2026-07-11,135,Union,exact
+World Trade Centre,Red Metro Line,18661,2017-01-01,2026-07-11,139,World Trade Centre,exact
+centrepoint,Red Metro Line,13383,2021-08-08,2026-07-11,128,centrepoint,inferred
+etisalat by e&,Green Metro Line,2645,2023-04-16,2025-05-10,160,Etisalat,inferred
+max,Red Metro Line,9768,2019-06-18,2026-07-11,138,max,inferred

@@ -1,0 +1,5 @@
+data/
+infra/config.local.sh
+.ipynb_checkpoints/
+__pycache__/
+.venv/

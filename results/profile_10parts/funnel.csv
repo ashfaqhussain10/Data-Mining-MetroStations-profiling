@@ -1,0 +1,10 @@
+step,rows
+Raw rows,10484655
+No station removed,9371
+Date-only removed,5844691
+Timed rows,4630593
+Outside windows removed,1289634
+Timed rows in windows,3340959
+Station-windows,245
+Rows at 300+ taps,244
+Rows at 100+ taps,245

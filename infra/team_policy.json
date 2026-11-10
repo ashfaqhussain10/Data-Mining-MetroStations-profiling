@@ -1,0 +1,78 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "WhoAmI",
+      "Effect": "Allow",
+      "Action": "sts:GetCallerIdentity",
+      "Resource": "*"
+    },
+    {
+      "Sid": "SeeTheBucket",
+      "Effect": "Allow",
+      "Action": ["s3:ListBucket", "s3:GetBucketLocation"],
+      "Resource": "arn:aws:s3:::__BUCKET__"
+    },
+    {
+      "Sid": "ReadEverythingInTheBucket",
+      "Effect": "Allow",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::__BUCKET__/*"
+    },
+    {
+      "Sid": "WriteOnlyPipelineOutputs",
+      "Effect": "Allow",
+      "Action": ["s3:PutObject", "s3:DeleteObject", "s3:AbortMultipartUpload"],
+      "Resource": [
+        "arn:aws:s3:::__BUCKET__/curated/*",
+        "arn:aws:s3:::__BUCKET__/athena-results/*"
+      ]
+    },
+    {
+      "Sid": "RunQueriesInTheProjectWorkgroup",
+      "Effect": "Allow",
+      "Action": [
+        "athena:StartQueryExecution",
+        "athena:StopQueryExecution",
+        "athena:GetQueryExecution",
+        "athena:GetQueryResults",
+        "athena:BatchGetQueryExecution",
+        "athena:ListQueryExecutions",
+        "athena:GetWorkGroup"
+      ],
+      "Resource": "arn:aws:athena:__REGION__:__ACCOUNT__:workgroup/__WORKGROUP__"
+    },
+    {
+      "Sid": "ListAthenaBasics",
+      "Effect": "Allow",
+      "Action": ["athena:ListWorkGroups", "athena:ListDataCatalogs", "athena:GetDataCatalog"],
+      "Resource": "*"
+    },
+    {
+      "Sid": "UseTheProjectCatalog",
+      "Effect": "Allow",
+      "Action": [
+        "glue:GetDatabase",
+        "glue:GetDatabases",
+        "glue:GetTable",
+        "glue:GetTables",
+        "glue:CreateTable",
+        "glue:UpdateTable",
+        "glue:DeleteTable",
+        "glue:GetPartition",
+        "glue:GetPartitions",
+        "glue:BatchGetPartition",
+        "glue:CreatePartition",
+        "glue:BatchCreatePartition",
+        "glue:UpdatePartition",
+        "glue:DeletePartition",
+        "glue:BatchDeletePartition"
+      ],
+      "Resource": [
+        "arn:aws:glue:__REGION__:__ACCOUNT__:catalog",
+        "arn:aws:glue:__REGION__:__ACCOUNT__:database/__DATABASE__",
+        "arn:aws:glue:__REGION__:__ACCOUNT__:table/__DATABASE__/*"
+      ]
+    }
+  ]
+}

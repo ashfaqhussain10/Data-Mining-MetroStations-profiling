@@ -1,0 +1,3 @@
+txn_type,n_rows,start_missing,end_missing,both_missing,columns_disagree
+Check in,5295523,516875.0,2616.0,2616.0,4735.0
+Check out,5189132,4476512.0,6755.0,6755.0,0.0

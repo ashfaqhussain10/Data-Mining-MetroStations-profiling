@@ -1,0 +1,15 @@
+era,weekday,rows_per_day
+to 2021,Friday,2577.0
+to 2021,Saturday,2889.0
+to 2021,Monday,3515.0
+to 2021,Wednesday,3529.0
+to 2021,Tuesday,3537.0
+to 2021,Sunday,3569.0
+to 2021,Thursday,3881.0
+from 2022,Sunday,2242.0
+from 2022,Saturday,2681.0
+from 2022,Thursday,2941.0
+from 2022,Friday,2943.0
+from 2022,Wednesday,3026.0
+from 2022,Tuesday,3085.0
+from 2022,Monday,3123.0
