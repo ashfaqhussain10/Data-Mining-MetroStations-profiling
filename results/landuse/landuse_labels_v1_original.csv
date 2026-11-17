@@ -1,0 +1,54 @@
+location_id,station,business_ratio,residential_ratio,shopping_leisure_ratio,education_ratio,top_group,top_ratio,landuse_type,rule
+128,centrepoint,0.798,1.766,0.541,3.276,education,3.276,Airport,airport terminal within 500 m
+129,Emirates,2.136,0.0,1.345,0.0,business,2.136,Business,Business share 2.136x the average
+130,Airport Terminal 3,0.67,0.0,1.687,0.0,shopping_leisure,1.687,Airport,airport terminal within 500 m
+131,Airport Terminal 1,0.988,0.0,1.613,0.0,shopping_leisure,1.613,Airport,airport terminal within 500 m
+132,GGICO,1.837,0.826,0.911,0.84,business,1.837,Business,Business share 1.837x the average
+133,City Centre Deira,1.714,0.624,1.075,0.15,business,1.714,Transfer and hub,bus or ferry station within 300 m
+134,Al Rigga,1.083,0.427,1.338,0.112,shopping_leisure,1.338,Shopping and leisure,Shopping and leisure share 1.338x the average
+135,Union,0.416,0.061,1.71,0.0,shopping_leisure,1.71,Transfer and hub,Red/Green interchange
+136,BurJuman,1.054,0.198,1.471,0.433,shopping_leisure,1.471,Transfer and hub,Red/Green interchange
+137,ADCB,0.838,0.162,1.543,0.392,shopping_leisure,1.543,Shopping and leisure,Shopping and leisure share 1.543x the average
+138,max,1.653,0.947,0.871,1.298,business,1.653,Transfer and hub,bus or ferry station within 300 m
+139,World Trade Centre,1.418,1.715,0.501,0.388,residential,1.715,Residential,Residential share 1.715x the average
+140,Emirates Towers,2.105,1.165,0.655,0.667,business,2.105,Business,Business share 2.105x the average
+141,Financial Centre,1.832,1.219,0.67,1.298,business,1.832,Business,Business share 1.832x the average
+142,Burj Khalifa/ Dubai Mall,1.232,0.594,1.197,0.464,business,1.232,Mixed,no group reaches 1.3x the average
+143,Business Bay,2.964,0.62,0.757,1.275,business,2.964,Business,Business share 2.964x the average
+146,ONPASSIVE,1.259,1.144,0.841,1.569,education,1.569,Education,Education share 1.569x the average
+148,Equiti,0.953,1.044,0.99,0.834,residential,1.044,Mixed,no group reaches 1.3x the average
+149,Mall of the Emirates,0.633,0.89,1.164,0.458,shopping_leisure,1.164,Transfer and hub,bus or ferry station within 300 m
+150,Mashreq,0.505,0.725,1.278,0.912,shopping_leisure,1.278,Mixed,no group reaches 1.3x the average
+151,Dubai Internet City,1.551,0.861,0.847,5.125,education,5.125,Education,Education share 5.125x the average
+152,Al Khail,3.403,1.008,0.448,0.496,business,3.403,Business,Business share 3.403x the average
+153,Sobha Realty,0.893,1.227,0.912,0.237,residential,1.227,Mixed,no group reaches 1.3x the average
+154,DMCC,1.059,1.083,0.952,0.467,residential,1.083,Mixed,no group reaches 1.3x the average
+155,Jabal Ali,0.878,0.701,1.229,0.0,shopping_leisure,1.229,Mixed,no group reaches 1.3x the average
+156,Ibn Battuta,0.513,1.926,0.551,1.855,residential,1.926,Transfer and hub,bus or ferry station within 300 m
+157,Energy,0.0,2.151,0.586,0.0,residential,2.151,Residential,Residential share 2.151x the average
+158,Danube,0.407,2.798,0.114,0.0,residential,2.798,Residential,Residential share 2.798x the average
+159,UAE Exchange,4.16,0.664,0.485,0.0,business,4.16,Transfer and hub,bus or ferry station within 300 m
+160,Etisalat,0.226,2.502,0.276,2.04,residential,2.502,Transfer and hub,bus or ferry station within 300 m
+161,Al Qusais,1.395,1.485,0.506,5.601,education,5.601,Education,Education share 5.601x the average
+162,Dubai Airport Free Zone,0.625,1.459,0.787,2.258,education,2.258,Education,Education share 2.258x the average
+163,Al Nahda,0.525,1.849,0.547,3.626,education,3.626,Education,Education share 3.626x the average
+164,Stadium,0.519,1.29,0.821,5.734,education,5.734,Education,Education share 5.734x the average
+165,Al Qiyadah,0.932,0.228,1.465,1.086,shopping_leisure,1.465,Shopping and leisure,Shopping and leisure share 1.465x the average
+166,Abu Hail,0.717,0.338,1.438,1.569,education,1.569,Transfer and hub,bus or ferry station within 300 m
+167,Abu Baker Al Siddique,0.354,1.201,1.057,0.08,residential,1.201,Mixed,no group reaches 1.3x the average
+168,Salah Al Din,0.343,0.428,1.511,0.067,shopping_leisure,1.511,Shopping and leisure,Shopping and leisure share 1.511x the average
+170,Baniyas Square,0.229,0.029,1.773,0.0,shopping_leisure,1.773,Transfer and hub,bus or ferry station within 300 m
+171,Gold Souq,0.189,0.03,1.782,0.0,shopping_leisure,1.782,Shopping and leisure,Shopping and leisure share 1.782x the average
+172,Al Ras,0.179,0.02,1.787,0.115,shopping_leisure,1.787,Shopping and leisure,Shopping and leisure share 1.787x the average
+173,Al Ghubaiba,0.291,0.022,1.756,0.251,shopping_leisure,1.756,Transfer and hub,bus or ferry station within 300 m
+174,Sharaf DG,0.536,0.275,1.55,0.277,shopping_leisure,1.55,Transfer and hub,bus or ferry station within 300 m
+176,Oud Metha,1.425,0.244,1.329,1.532,education,1.532,Transfer and hub,bus or ferry station within 300 m
+177,Dubai Healthcare City,1.402,0.967,0.862,3.455,education,3.455,Education,Education share 3.455x the average
+178,Al Jadaf,0.395,0.947,1.198,0.0,shopping_leisure,1.198,Mixed,no group reaches 1.3x the average
+179,Creek,0.416,0.996,1.164,0.0,shopping_leisure,1.164,Mixed,no group reaches 1.3x the average
+181,The Gardens,0.073,2.591,0.304,0.328,residential,2.591,Residential,Residential share 2.591x the average
+182,Discovery Gardens,0.109,2.753,0.204,0.198,residential,2.753,Residential,Residential share 2.753x the average
+183,Al Furjan,0.03,2.879,0.151,0.136,residential,2.879,Residential,Residential share 2.879x the average
+184,Jumeirah Golf Estates,0.0,1.721,0.838,0.0,residential,1.721,Residential,Residential share 1.721x the average
+185,Dubai Investment Park,1.162,0.557,1.193,2.1,education,2.1,Education,Education share 2.1x the average
+187,EXPO,1.976,1.643,0.422,0.0,business,1.976,Business,Business share 1.976x the average

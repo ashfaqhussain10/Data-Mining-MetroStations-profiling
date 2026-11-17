@@ -8,7 +8,7 @@ source "$PIPELINE_DIR/athena.sh"
 SQL_DIR="$PIPELINE_DIR/../sql"
 
 echo "Clearing curated tables"
-for table in curated_ridership band_counts station_window_totals row_audit; do
+for table in curated_ridership band_counts station_window_totals row_audit features_unscaled features; do
   run_query "DROP TABLE IF EXISTS $table"
 done
 aws s3 rm "s3://$BUCKET/curated/" --recursive --only-show-errors

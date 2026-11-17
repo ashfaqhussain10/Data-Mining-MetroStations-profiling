@@ -30,6 +30,10 @@ check "Rows at 300+ taps" 244 "SELECT count_if(passes_minimum) FROM station_wind
 check "Distinct stations" 53 "SELECT count(DISTINCT location_id) FROM station_window_totals"
 check "Business Bay W24/25 taps" 28549 "SELECT timed_taps FROM station_window_totals WHERE station = 'Business Bay' AND win = 'W24/25'"
 
+check "Feature rows" 244 "SELECT count(*) FROM features"
+check "Feature nulls" 0 "SELECT count_if(check_in_share_00_07 IS NULL OR net_flow_00_07 IS NULL OR net_flow_20_24 IS NULL OR weekend_share IS NULL OR volume_share IS NULL) FROM features"
+check "Business Bay W24/25 morning net flow" -0.5762 "SELECT CAST(round(net_flow_07_10, 4) AS varchar) FROM features_unscaled WHERE station = 'Business Bay' AND win = 'W24/25'"
+
 if [[ "$failures" -gt 0 ]]; then
   echo "$failures check(s) failed." >&2
   exit 1

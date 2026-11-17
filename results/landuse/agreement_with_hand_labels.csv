@@ -1,0 +1,13 @@
+location_id,station,expected_type,landuse_type,rule,agree
+156,Ibn Battuta,Shopping and leisure,Residential,Residential share 1.926x the average,False
+154,DMCC,Mixed,Mixed,no group reaches 1.3x the average,True
+164,Stadium,Residential,Education,Education share 5.734x the average,False
+134,Al Rigga,Mixed,Shopping and leisure,Shopping and leisure share 1.338x the average,False
+187,EXPO,Shopping and leisure,Business,Business share 1.976x the average,False
+177,Dubai Healthcare City,Business,Business,Business share 1.402x the average,True
+173,Al Ghubaiba,Transfer and hub,Shopping and leisure,Shopping and leisure share 1.756x the average,False
+176,Oud Metha,Education,Education,Education share 1.532x the average,True
+136,BurJuman,Transfer and hub,Transfer and hub,Red/Green interchange,True
+149,Mall of the Emirates,Shopping and leisure,Mixed,no group reaches 1.3x the average,False
+130,Airport Terminal 3,Airport,Airport,airport terminal within 500 m,True
+141,Financial Centre,Business,Business,Business share 1.832x the average,True

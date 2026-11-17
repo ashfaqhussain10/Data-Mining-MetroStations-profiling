@@ -1,0 +1,13 @@
+location_id,station,expected_type,landuse_type,rule,agree
+156,Ibn Battuta,Shopping and leisure,Transfer and hub,bus or ferry station within 300 m,False
+154,DMCC,Mixed,Mixed,no group reaches 1.3x the average,True
+164,Stadium,Residential,Education,Education share 5.734x the average,False
+134,Al Rigga,Mixed,Shopping and leisure,Shopping and leisure share 1.338x the average,False
+187,EXPO,Shopping and leisure,Business,Business share 1.976x the average,False
+177,Dubai Healthcare City,Business,Education,Education share 3.455x the average,False
+173,Al Ghubaiba,Transfer and hub,Transfer and hub,bus or ferry station within 300 m,True
+176,Oud Metha,Education,Transfer and hub,bus or ferry station within 300 m,False
+136,BurJuman,Transfer and hub,Transfer and hub,Red/Green interchange,True
+149,Mall of the Emirates,Shopping and leisure,Transfer and hub,bus or ferry station within 300 m,False
+130,Airport Terminal 3,Airport,Airport,airport terminal within 500 m,True
+141,Financial Centre,Business,Business,Business share 1.832x the average,True

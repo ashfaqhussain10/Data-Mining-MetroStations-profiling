@@ -10,10 +10,11 @@ BITS Pilani Dubai, CS F415 Data Mining, Semester I 2026-27. Team: Chaitanya Nark
 |---|---|
 | Dataset analysis | Done: `notebooks/01_dataset_profile.ipynb`, `notebooks/02_ten_parts_profile.ipynb` |
 | Raw data, 10 parts (10.5 million rows) | Done: local `data/raw/` and S3 |
-| AWS pipeline (S3, Glue, Athena) | Done, and matches the local results exactly |
-| Feature table (244 rows x 17 features) | Done: `results/features/features.parquet` |
+| AWS pipeline (S3, Glue, Athena) | Done, including the feature table; matches the local build exactly |
+| Feature table (244 rows x 17 features) | Done: built in Athena, exported to `results/features/features.parquet` |
 | Station graph (`edges.csv`) | Not started. Waits on station order and the link-weight decision |
-| Five clustering methods and evaluation | Not started. Waits on hand labels |
+| Validation labels | Done: 12 web-sourced labels in `results/hand_labels.csv` |
+| Five clustering methods and evaluation | Not started |
 
 ## Repository layout
 
@@ -28,7 +29,8 @@ BITS Pilani Dubai, CS F415 Data Mining, Semester I 2026-27. Team: Chaitanya Nark
 │   ├── 01_dataset_profile.ipynb    analysis of the first part only (1.05M rows)
 │   └── 02_ten_parts_profile.ipynb  the same analysis on all 10 parts
 ├── src/
-│   └── build_features.py       builds the 244 x 17 feature table from data/raw/
+│   ├── build_features.py       local cross-check: builds the same feature table from data/raw/
+│   └── landuse_labels.py       OpenStreetMap counts around each station (context only)
 ├── scripts/
 │   └── download_parts.py       downloads chosen parts from data.dubai into data/raw/
 ├── sql/                        Athena SQL, run in order by pipeline/run_all.sh
@@ -36,13 +38,15 @@ BITS Pilani Dubai, CS F415 Data Mining, Semester I 2026-27. Team: Chaitanya Nark
 │   ├── 02_curated_ridership.sql
 │   ├── 03_band_counts.sql
 │   ├── 04_station_window_totals.sql
-│   └── 05_row_audit.sql
+│   ├── 05_row_audit.sql
+│   └── 06_features.sql        the 17 features and their z-scores
 ├── pipeline/
 │   ├── upload_raw.sh           copies data/raw/ to S3 (project owner only)
 │   ├── run_all.sh              rebuilds every curated table, then runs verify.sh
 │   ├── verify.sh               10 checks against the notebook numbers
+│   ├── export_features.*       downloads Athena's feature tables into results/features/
 │   ├── athena.sh               helper: run a query, wait, fail on error
-│   └── compare_with_local.*    rebuilds the features from Athena and compares with local
+│   └── compare_with_local.*    checks Athena's counts against the local feature build
 ├── infra/                      AWS setup (project owner only)
 │   ├── config.sh               shared names: bucket, region, workgroup, role
 │   ├── config.local.example.sh template for config.local.sh (git-ignored)
@@ -54,7 +58,9 @@ BITS Pilani Dubai, CS F415 Data Mining, Semester I 2026-27. Team: Chaitanya Nark
 ├── results/
 │   ├── profile/                tables from notebook 01, plus the draft station map
 │   ├── profile_10parts/        tables from notebook 02
-│   └── features/               the feature table handed to the models
+│   ├── features/               the feature table handed to the models (exported from Athena)
+│   ├── hand_labels.csv         12 stations with an expected type from public sources
+│   └── landuse/                OpenStreetMap counts and map-based labels (context only)
 ├── figures/                    charts from the notebooks
 └── docs/
     └── TEAM_SETUP.md           AWS sign-in and pipeline steps for teammates
@@ -93,23 +99,27 @@ One card tap at one station gate. It is a sample, not every rider, and it is not
 
 ## Data pipeline
 
-The same logic runs in two places, and both give identical results:
+Athena builds everything up to and including the feature table. The models then run locally on that one small table.
 
-- **AWS** (the project pipeline): S3 + Glue Data Catalog + Athena, in `ap-south-1`.
-- **Local** (analysis and checking): DuckDB in the notebooks and `src/build_features.py`.
+- **AWS** (the source of record): S3 + Glue Data Catalog + Athena, in `ap-south-1`. `pipeline/run_all.sh` rebuilds every table; `pipeline/export_features.sh` downloads the features into `results/features/`.
+- **Local** (cross-check): DuckDB in the notebooks and `src/build_features.py` compute the same feature table from `data/raw/`. It matches Athena's to within 4e-15.
 
 ```
-data.dubai parts ──download_parts.py──> data/raw/ ──upload_raw.sh──> S3 raw/ (plain CSV)
-                                           │                              │
-                                           │                     Athena external tables
-                                           │                              │
-                                  build_features.py            curated_ridership (Parquet,
-                                           │                   partitioned by year/month)
-                                           │                              │
-                                           │                 band_counts, station_window_totals,
-                                           │                             row_audit
-                                           ▼                              │
-                        results/features/features.parquet <── compare_with_local (identical)
+data.dubai parts ─download_parts.py─> data/raw/ ─upload_raw.sh─> S3 raw/ (plain CSV)
+                                                                   │  Athena external tables
+                                                                   ▼
+                                               curated_ridership (Parquet, by year/month)
+                                                                   │
+                                          band_counts, station_window_totals, row_audit
+                                                                   │  06_features.sql
+                                                                   ▼
+                                               features_unscaled, features  (244 rows)
+                                                                   │  export_features.sh
+                                                                   ▼
+                                         results/features/features.parquet  (in Git)
+                                                                   │  clustering runs locally
+                                                                   ▼
+                                   K-means, Ward, DBSCAN, Spectral, ST-GRSC (+ edges.csv)
 ```
 
 ### Cleaning rules, in order
@@ -143,6 +153,8 @@ s3://dubai-metro-profiling-<account-id>/
 ├── curated/band_counts/
 ├── curated/station_window_totals/
 ├── curated/row_audit/
+├── curated/features_unscaled/
+├── curated/features/
 └── athena-results/         query results
 ```
 
@@ -156,6 +168,8 @@ s3://dubai-metro-profiling-<account-id>/
 | `band_counts` | `03_band_counts.sql` | station-window-band | `win`, `location_id`, `station`, `band`, `check_ins`, `check_outs` |
 | `station_window_totals` | `04_station_window_totals.sql` | station-window | `timed_taps`, `check_ins`, `check_outs`, `weekend_taps`, `passes_minimum` |
 | `row_audit` | `05_row_audit.sql` | source file | `raw_rows`, `no_station`, `date_only`, `timed_outside_windows`, `timed_in_windows`, `unmapped_station` |
+| `features_unscaled` | `06_features.sql` | station-window passing the 300-tap minimum (244) | keys plus the 17 features |
+| `features` | `06_features.sql` | the same 244 rows | keys plus the 17 features, z-scored: the model input |
 
 Parquet cuts the data scanned per query: a three-month query reads 0.1 MB instead of 1,545 MB of CSV, and a two-column query over everything reads 8.1 MB. Curated data is 80 MB against 1,545 MB of raw CSV.
 
@@ -208,12 +222,25 @@ Every feature is standardised across the 244 rows: `z = (x - mean) / std`, using
 
 | File | Contents |
 |---|---|
-| `features.parquet` | **model input**: keys plus 17 z-scored features |
+| `features.parquet` | **model input**: keys plus 17 z-scored features, exported from Athena's `features` table |
 | `features_unscaled.parquet` | the same rows before scaling, for reading and plotting |
 | `removed.csv` | station-windows below 300 timed taps |
 | `feature_summary.csv` | mean and standard deviation used for scaling |
 
 Key columns in both Parquet files: `win`, `location_id`, `station`, `timed_taps`, `check_ins`, `check_outs`.
+
+## Validation labels
+
+Clustering has no answer key, so 12 well-known stations were given an expected type **before any clusters existed**, each from a public source (mostly Wikipedia) and recorded with its link in `results/hand_labels.csv`.
+
+| Types used | Business, Residential, Shopping and leisure, Education, Airport, Transfer and hub, Mixed |
+|---|---|
+
+- 8 of the 12 stations had never appeared in our charts; the other 4 (BurJuman, Mall of the Emirates, Airport Terminal 3, Financial Centre) had, which the `seen_in_charts` column records.
+- Oud Metha and BurJuman also draw on a team member's own experience, marked in `source_kind`.
+- These labels are only used to check the clusters, never as model input.
+
+**Map-based labels were tried and not used for validation.** `src/landuse_labels.py` counts OpenStreetMap features within 1 km of every station and assigns a type by rule. It agreed with the web labels for 5 of 12 stations as first designed, and 6 of 12 after fixing two rule flaws (bus stops at metro stations made 13 stations "hubs"; one or two schools made a station "Education"). The remaining gaps come from the map data itself: a mall counts as one feature while a residential area counts as hundreds, and some areas are barely mapped. Both runs are kept in `results/landuse/` (`*_v1_original.csv` is the first). The counts remain useful as background on what surrounds each station.
 
 ## Model input and output
 
@@ -237,7 +264,7 @@ Key columns in both Parquet files: `win`, `location_id`, `station`, `timed_taps`
 - five metrics: silhouette, Davies-Bouldin, Calinski-Harabasz, SSE, and ARI stability over 100 resamples of 80% of rows;
 - the ablation: no graph, spatial links only, temporal links only, both;
 - cluster profiles, a station-by-window type table, and the list of stations that changed type;
-- a check against hand labels made before any results existed.
+- a check against the 12 validation labels in `results/hand_labels.csv`.
 
 ## Running it
 
@@ -257,7 +284,18 @@ python scripts/download_parts.py --parts 1 2 300 586 900 1186 1500 1786 2100 238
 
 The stations, lines and official summary files are downloaded from Data Dubai by hand into `data/raw/`.
 
-### Build the feature table locally
+### Use the feature table (no AWS needed)
+
+`results/features/features.parquet` is in Git, so a `git pull` is enough to start modelling:
+
+```python
+import duckdb
+df = duckdb.sql("select * from 'results/features/features.parquet'").df()
+keys = ["win", "location_id", "station", "timed_taps", "check_ins", "check_outs"]
+X = df.drop(columns=keys).to_numpy()   # 244 x 17, already z-scored
+```
+
+### Cross-check locally (needs data/raw/)
 
 ```bash
 python src/build_features.py
@@ -271,8 +309,8 @@ Teammates: first follow `docs/TEAM_SETUP.md`, then:
 
 ```bash
 export AWS_PROFILE=data-mining
-bash pipeline/run_all.sh                    # rebuilds curated tables, ends with 10 PASS checks
-bash pipeline/compare_with_local.sh         # confirms AWS matches results/features/
+bash pipeline/run_all.sh                    # rebuilds every table, ends with 13 PASS checks
+bash pipeline/export_features.sh            # downloads the features into results/features/
 ```
 
 Only the project owner runs `infra/` and `pipeline/upload_raw.sh`.

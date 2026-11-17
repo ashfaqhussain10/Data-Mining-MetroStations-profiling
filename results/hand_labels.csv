@@ -1,0 +1,13 @@
+location_id,station,expected_type,reason,source_kind,source,seen_in_charts
+156,Ibn Battuta,Shopping and leisure,Named after the adjacent Ibn Battuta Mall; serves the Jebel Ali area,web,https://en.wikipedia.org/wiki/Ibn_Battuta_(Dubai_Metro),no
+154,DMCC,Mixed,"Jumeirah Lakes Towers: mix of residential, commercial and mixed-use towers in the DMCC free zone",web,https://en.wikipedia.org/wiki/DMCC_(Dubai_Metro); https://www.propertyfinder.ae/en/community-guides/dubai/jumeirah-lake-towers,no
+164,Stadium,Residential,In Al Qusais near Rashid Stadium and Amity School; Al Qusais has a residential cluster of mid- and low-rise buildings,web,https://en.wikipedia.org/wiki/Stadium_(Dubai_Metro); https://www.bayut.com/area-guides/al-qusais-residential-area/,no
+134,Al Rigga,Mixed,"Serves Al Rigga, Deira: budget hotels, Deira Clock Tower and Al Ghurair Centre nearby",web,https://en.wikipedia.org/wiki/Al_Rigga_(Dubai_Metro),no
+187,EXPO,Shopping and leisure,"Built for the Expo 2020 exhibition site, now Expo City Dubai (events and leisure)",web,https://www.khaleejtimes.com/uae/expo-city-dubai/dubai-metro-route-2020-all-you-need-to-know-about-getting-to-the-expo-site,no
+177,Dubai Healthcare City,Business,"Serves the Dubai Healthcare City district (workplaces and clinics), Wafi City nearby",web,https://en.wikipedia.org/wiki/Dubai_Healthcare_City_(Dubai_Metro),no
+173,Al Ghubaiba,Transfer and hub,Next to Al Ghubaiba Bus Station and Marine Transport Station in the historic centre,web,https://en.wikipedia.org/wiki/Al_Ghubaiba_(Dubai_Metro),no
+176,Oud Metha,Education,Near Indian High School and Dubai English Speaking School; school-hour traffic; team member reports morning crowding from schools,web and personal,https://en.wikipedia.org/wiki/Oud_Metha_(Dubai_Metro); https://www.khaleejtimes.com/uae/oud-metha-a-dubai-residential-area-with-everything-around,no
+136,BurJuman,Transfer and hub,One of two Red and Green Line interchange stations; also known to a team member,web and personal,https://en.wikipedia.org/wiki/BurJuman_(Dubai_Metro),yes
+149,Mall of the Emirates,Shopping and leisure,Connected to Mall of the Emirates by an enclosed walkway,web,https://en.wikipedia.org/wiki/Mall_of_the_Emirates_(Dubai_Metro),yes
+130,Airport Terminal 3,Airport,Serves Terminal 3 of Dubai International Airport,web,https://en.wikipedia.org/wiki/Airport_Terminal_3_(Dubai_Metro),yes
+141,Financial Centre,Business,Named after the Dubai International Financial Centre (DIFC) to its east,web,https://en.wikipedia.org/wiki/Financial_Centre_(Dubai_Metro),yes
