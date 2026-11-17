@@ -1,0 +1,13 @@
+station,expected_type,seen_in_charts,main_cluster,windows_in_main,windows
+Dubai Healthcare City,Business,no,0,5,5
+Oud Metha,Education,no,0,5,5
+DMCC,Mixed,no,0,5,5
+EXPO,Shopping and leisure,no,0,2,2
+Airport Terminal 3,Airport,yes,1,5,5
+Financial Centre,Business,yes,1,4,5
+Al Rigga,Mixed,no,1,5,5
+Stadium,Residential,no,1,5,5
+Ibn Battuta,Shopping and leisure,no,1,3,5
+Mall of the Emirates,Shopping and leisure,yes,1,3,5
+Al Ghubaiba,Transfer and hub,no,1,5,5
+BurJuman,Transfer and hub,yes,1,5,5

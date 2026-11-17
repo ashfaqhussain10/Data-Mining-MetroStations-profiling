@@ -116,7 +116,8 @@ data.dubai parts ─download_parts.py─> data/raw/ ─upload_raw.sh─> S3 raw/
                                                features_unscaled, features  (244 rows)
                                                                    │  export_features.sh
                                                                    ▼
-                                         results/features/features.parquet  (in Git)
+                                       s3://<bucket>/curated/features/  (Parquet)
+                                                                   │  models read it with awswrangler;
                                                                    │  clustering runs locally
                                                                    ▼
                                    K-means, Ward, DBSCAN, Spectral, ST-GRSC (+ edges.csv)
@@ -244,7 +245,7 @@ Clustering has no answer key, so 12 well-known stations were given an expected t
 
 ## Model input and output
 
-**Input, all five methods:** `results/features/features.parquet`, a 244 x 17 matrix of z-scored features. Every method uses the same matrix so results compare directly. The key columns identify rows and are not used for clustering.
+**Input, all five methods:** Athena's `features` table, read from `s3://<bucket>/curated/features/`, a 244 x 17 matrix of z-scored features. Every method uses the same matrix so results compare directly. The key columns identify rows and are not used for clustering.
 
 **Extra input, ST-GRSC only:** a station-window graph, planned as `edges.csv`:
 
@@ -284,16 +285,20 @@ python scripts/download_parts.py --parts 1 2 300 586 900 1186 1500 1786 2100 238
 
 The stations, lines and official summary files are downloaded from Data Dubai by hand into `data/raw/`.
 
-### Use the feature table (no AWS needed)
+### Read the feature table for modelling (from S3)
 
-`results/features/features.parquet` is in Git, so a `git pull` is enough to start modelling:
+Models read the feature table directly from S3, where Athena writes it. Teammates first set up AWS access (`docs/TEAM_SETUP.md`), then:
 
 ```python
-import duckdb
-df = duckdb.sql("select * from 'results/features/features.parquet'").df()
+import awswrangler as wr, boto3
+session = boto3.Session(region_name="ap-south-1")
+account = session.client("sts").get_caller_identity()["Account"]
+df = wr.s3.read_parquet(f"s3://dubai-metro-profiling-{account}/curated/features/", boto3_session=session)
 keys = ["win", "location_id", "station", "timed_taps", "check_ins", "check_outs"]
 X = df.drop(columns=keys).to_numpy()   # 244 x 17, already z-scored
 ```
+
+`notebooks/03_kmeans_example.ipynb` shows the full pattern: read from S3, fit, save labels, evaluate. `results/features/` holds a copy exported by `pipeline/export_features.sh`, kept for reference and offline checks.
 
 ### Cross-check locally (needs data/raw/)
 

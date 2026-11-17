@@ -1,0 +1,3 @@
+cluster,rows,check_in_share_00_07,check_in_share_07_10,check_in_share_10_16,check_in_share_16_20,check_in_share_20_24,check_out_share_00_07,check_out_share_07_10,check_out_share_10_16,check_out_share_16_20,check_out_share_20_24,net_flow_00_07,net_flow_07_10,net_flow_10_16,net_flow_16_20,net_flow_20_24,weekend_share,volume_share
+0,107,0.023,0.089,0.252,0.458,0.177,0.052,0.306,0.282,0.234,0.126,-0.297,-0.495,-0.016,0.353,0.19,0.221,0.017
+1,137,0.059,0.216,0.279,0.289,0.158,0.041,0.121,0.238,0.356,0.245,0.197,0.275,0.077,-0.106,-0.226,0.249,0.023
