@@ -14,7 +14,7 @@ BITS Pilani Dubai, CS F415 Data Mining, Semester I 2026-27. Team: Chaitanya Nark
 | Feature table (244 rows x 17 features) | Done: built in Athena, exported to `results/features/features.parquet` |
 | Station graph (`edges.csv`) | Not started. Waits on station order and the link-weight decision |
 | Validation labels | Done: 12 web-sourced labels in `results/hand_labels.csv` |
-| Five clustering methods and evaluation | Not started |
+| Five clustering methods and evaluation | Ward done: `notebooks/04_ward.ipynb` |
 
 ## Repository layout
 
@@ -245,6 +245,46 @@ Clustering has no answer key, so 12 well-known stations were given an expected t
 
 ## Model input and output
 
+## Results
+
+## Hierarchical( Ward) 
+`notebooks/04_ward.ipynb`. Ward linkage on the 244 x 17 z-scored feature table,
+cut at every k from 2 to 10.
+
+**k = 6.** Chosen from the dendrogram and the cluster contents, not from
+silhouette alone. The largest merge gaps are at k=2 (12.9) and k=3 (10.5), but
+both merge away a small group that is substantively distinct. Silhouette also
+peaks at k=6 (0.2785). Stability over 100 resamples of 80% of rows is ARI 0.762
+(sd 0.120), against 0.771 at k=5 and 0.706 at k=7, so k=6 sits on a plateau.
+
+| Cluster | Rows | Day pattern | Reading |
+|---|---|---|---|
+| 1 | 83 | Leaves in the morning, returns in the evening | Residential origins |
+| 4 | 53 | Arrives in the morning, leaves in the evening | Workplaces, higher volume |
+| 0 | 44 | Flat through the day, high weekend share | Mixed, all-day |
+| 2 | 40 | Strongest morning arrival, low volume | Workplaces, smaller |
+| 3 | 18 | Late-night and early-morning arrivals | Airport pattern |
+| 5 | 6 | Highest volume, 39% of entries after 20:00 | Major visitor destinations |
+
+Against the 12 validation labels in `results/hand_labels.csv`: Airport Terminal 3
+falls alone in cluster 3, both shopping malls fall together in cluster 0, and
+Stadium falls in the residential cluster. Transfer hubs and "mixed" split across
+clusters, which is expected since neither is a behavioural category.
+
+Eleven of the twelve labelled stations keep the same cluster in all five windows.
+The exception is EXPO, which is in the visitor-destination cluster for W21/22 and
+elsewhere for W24/25. W21/22 covers September 2021 to February 2022; Expo 2020
+Dubai ran from October 2021 to March 2022.
+
+**Limitations.** Silhouette of 0.2785 is weak in absolute terms, so the clusters
+overlap more than they separate. The EXPO result is one station in two windows,
+so it is a single observation rather than a trend.
+
+Outputs: `results/labels/ward.parquet`, `results/metrics/ward_k_sweep.csv`,
+`ward_cluster_profiles.csv`, `ward_stability.csv`, `ward_vs_hand_labels.csv`,
+and four figures under `figures/ward_*.png`.
+
+
 **Input, all five methods:** Athena's `features` table, read from `s3://<bucket>/curated/features/`, a 244 x 17 matrix of z-scored features. Every method uses the same matrix so results compare directly. The key columns identify rows and are not used for clustering.
 
 **Extra input, ST-GRSC only:** a station-window graph, planned as `edges.csv`:
@@ -266,6 +306,8 @@ Clustering has no answer key, so 12 well-known stations were given an expected t
 - the ablation: no graph, spatial links only, temporal links only, both;
 - cluster profiles, a station-by-window type table, and the list of stations that changed type;
 - a check against the 12 validation labels in `results/hand_labels.csv`.
+
+
 
 ## Running it
 
