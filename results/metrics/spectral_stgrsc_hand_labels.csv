@@ -1,0 +1,115 @@
+method,win,location_id,station,expected_type,k,alpha,cluster
+spectral,W17/18,130,Airport Terminal 3,Airport,6,1.0,5
+spectral,W18/19,130,Airport Terminal 3,Airport,6,1.0,5
+spectral,W19/20,130,Airport Terminal 3,Airport,6,1.0,5
+spectral,W21/22,130,Airport Terminal 3,Airport,6,1.0,5
+spectral,W24/25,130,Airport Terminal 3,Airport,6,1.0,5
+spectral,W17/18,177,Dubai Healthcare City,Business,6,1.0,0
+spectral,W18/19,177,Dubai Healthcare City,Business,6,1.0,0
+spectral,W19/20,177,Dubai Healthcare City,Business,6,1.0,0
+spectral,W21/22,177,Dubai Healthcare City,Business,6,1.0,0
+spectral,W24/25,177,Dubai Healthcare City,Business,6,1.0,0
+spectral,W17/18,141,Financial Centre,Business,6,1.0,4
+spectral,W18/19,141,Financial Centre,Business,6,1.0,4
+spectral,W19/20,141,Financial Centre,Business,6,1.0,2
+spectral,W21/22,141,Financial Centre,Business,6,1.0,2
+spectral,W24/25,141,Financial Centre,Business,6,1.0,4
+spectral,W17/18,176,Oud Metha,Education,6,1.0,4
+spectral,W18/19,176,Oud Metha,Education,6,1.0,2
+spectral,W19/20,176,Oud Metha,Education,6,1.0,2
+spectral,W21/22,176,Oud Metha,Education,6,1.0,2
+spectral,W24/25,176,Oud Metha,Education,6,1.0,2
+spectral,W17/18,134,Al Rigga,Mixed,6,1.0,1
+spectral,W18/19,134,Al Rigga,Mixed,6,1.0,1
+spectral,W19/20,134,Al Rigga,Mixed,6,1.0,1
+spectral,W21/22,134,Al Rigga,Mixed,6,1.0,1
+spectral,W24/25,134,Al Rigga,Mixed,6,1.0,1
+spectral,W17/18,154,DMCC,Mixed,6,1.0,4
+spectral,W18/19,154,DMCC,Mixed,6,1.0,0
+spectral,W19/20,154,DMCC,Mixed,6,1.0,0
+spectral,W21/22,154,DMCC,Mixed,6,1.0,3
+spectral,W24/25,154,DMCC,Mixed,6,1.0,0
+spectral,W17/18,164,Stadium,Residential,6,1.0,1
+spectral,W18/19,164,Stadium,Residential,6,1.0,1
+spectral,W19/20,164,Stadium,Residential,6,1.0,1
+spectral,W21/22,164,Stadium,Residential,6,1.0,2
+spectral,W24/25,164,Stadium,Residential,6,1.0,1
+spectral,W21/22,187,EXPO,Shopping and leisure,6,1.0,3
+spectral,W24/25,187,EXPO,Shopping and leisure,6,1.0,0
+spectral,W17/18,156,Ibn Battuta,Shopping and leisure,6,1.0,4
+spectral,W18/19,156,Ibn Battuta,Shopping and leisure,6,1.0,1
+spectral,W19/20,156,Ibn Battuta,Shopping and leisure,6,1.0,3
+spectral,W21/22,156,Ibn Battuta,Shopping and leisure,6,1.0,3
+spectral,W24/25,156,Ibn Battuta,Shopping and leisure,6,1.0,3
+spectral,W17/18,149,Mall of the Emirates,Shopping and leisure,6,1.0,3
+spectral,W18/19,149,Mall of the Emirates,Shopping and leisure,6,1.0,3
+spectral,W19/20,149,Mall of the Emirates,Shopping and leisure,6,1.0,3
+spectral,W21/22,149,Mall of the Emirates,Shopping and leisure,6,1.0,3
+spectral,W24/25,149,Mall of the Emirates,Shopping and leisure,6,1.0,3
+spectral,W17/18,173,Al Ghubaiba,Transfer and hub,6,1.0,3
+spectral,W18/19,173,Al Ghubaiba,Transfer and hub,6,1.0,3
+spectral,W19/20,173,Al Ghubaiba,Transfer and hub,6,1.0,3
+spectral,W21/22,173,Al Ghubaiba,Transfer and hub,6,1.0,3
+spectral,W24/25,173,Al Ghubaiba,Transfer and hub,6,1.0,3
+spectral,W17/18,136,BurJuman,Transfer and hub,6,1.0,1
+spectral,W18/19,136,BurJuman,Transfer and hub,6,1.0,1
+spectral,W19/20,136,BurJuman,Transfer and hub,6,1.0,1
+spectral,W21/22,136,BurJuman,Transfer and hub,6,1.0,1
+spectral,W24/25,136,BurJuman,Transfer and hub,6,1.0,1
+stgrsc,W17/18,130,Airport Terminal 3,Airport,6,0.98,3
+stgrsc,W18/19,130,Airport Terminal 3,Airport,6,0.98,3
+stgrsc,W19/20,130,Airport Terminal 3,Airport,6,0.98,3
+stgrsc,W21/22,130,Airport Terminal 3,Airport,6,0.98,3
+stgrsc,W24/25,130,Airport Terminal 3,Airport,6,0.98,3
+stgrsc,W17/18,177,Dubai Healthcare City,Business,6,0.98,4
+stgrsc,W18/19,177,Dubai Healthcare City,Business,6,0.98,4
+stgrsc,W19/20,177,Dubai Healthcare City,Business,6,0.98,4
+stgrsc,W21/22,177,Dubai Healthcare City,Business,6,0.98,4
+stgrsc,W24/25,177,Dubai Healthcare City,Business,6,0.98,4
+stgrsc,W17/18,141,Financial Centre,Business,6,0.98,1
+stgrsc,W18/19,141,Financial Centre,Business,6,0.98,1
+stgrsc,W19/20,141,Financial Centre,Business,6,0.98,0
+stgrsc,W21/22,141,Financial Centre,Business,6,0.98,0
+stgrsc,W24/25,141,Financial Centre,Business,6,0.98,1
+stgrsc,W17/18,176,Oud Metha,Education,6,0.98,1
+stgrsc,W18/19,176,Oud Metha,Education,6,0.98,1
+stgrsc,W19/20,176,Oud Metha,Education,6,0.98,0
+stgrsc,W21/22,176,Oud Metha,Education,6,0.98,1
+stgrsc,W24/25,176,Oud Metha,Education,6,0.98,2
+stgrsc,W17/18,134,Al Rigga,Mixed,6,0.98,5
+stgrsc,W18/19,134,Al Rigga,Mixed,6,0.98,5
+stgrsc,W19/20,134,Al Rigga,Mixed,6,0.98,5
+stgrsc,W21/22,134,Al Rigga,Mixed,6,0.98,5
+stgrsc,W24/25,134,Al Rigga,Mixed,6,0.98,5
+stgrsc,W17/18,154,DMCC,Mixed,6,0.98,1
+stgrsc,W18/19,154,DMCC,Mixed,6,0.98,4
+stgrsc,W19/20,154,DMCC,Mixed,6,0.98,4
+stgrsc,W21/22,154,DMCC,Mixed,6,0.98,2
+stgrsc,W24/25,154,DMCC,Mixed,6,0.98,4
+stgrsc,W17/18,164,Stadium,Residential,6,0.98,5
+stgrsc,W18/19,164,Stadium,Residential,6,0.98,5
+stgrsc,W19/20,164,Stadium,Residential,6,0.98,5
+stgrsc,W21/22,164,Stadium,Residential,6,0.98,0
+stgrsc,W24/25,164,Stadium,Residential,6,0.98,5
+stgrsc,W21/22,187,EXPO,Shopping and leisure,6,0.98,2
+stgrsc,W24/25,187,EXPO,Shopping and leisure,6,0.98,4
+stgrsc,W17/18,156,Ibn Battuta,Shopping and leisure,6,0.98,1
+stgrsc,W18/19,156,Ibn Battuta,Shopping and leisure,6,0.98,5
+stgrsc,W19/20,156,Ibn Battuta,Shopping and leisure,6,0.98,2
+stgrsc,W21/22,156,Ibn Battuta,Shopping and leisure,6,0.98,2
+stgrsc,W24/25,156,Ibn Battuta,Shopping and leisure,6,0.98,2
+stgrsc,W17/18,149,Mall of the Emirates,Shopping and leisure,6,0.98,2
+stgrsc,W18/19,149,Mall of the Emirates,Shopping and leisure,6,0.98,2
+stgrsc,W19/20,149,Mall of the Emirates,Shopping and leisure,6,0.98,2
+stgrsc,W21/22,149,Mall of the Emirates,Shopping and leisure,6,0.98,2
+stgrsc,W24/25,149,Mall of the Emirates,Shopping and leisure,6,0.98,2
+stgrsc,W17/18,173,Al Ghubaiba,Transfer and hub,6,0.98,2
+stgrsc,W18/19,173,Al Ghubaiba,Transfer and hub,6,0.98,2
+stgrsc,W19/20,173,Al Ghubaiba,Transfer and hub,6,0.98,2
+stgrsc,W21/22,173,Al Ghubaiba,Transfer and hub,6,0.98,2
+stgrsc,W24/25,173,Al Ghubaiba,Transfer and hub,6,0.98,2
+stgrsc,W17/18,136,BurJuman,Transfer and hub,6,0.98,5
+stgrsc,W18/19,136,BurJuman,Transfer and hub,6,0.98,5
+stgrsc,W19/20,136,BurJuman,Transfer and hub,6,0.98,5
+stgrsc,W21/22,136,BurJuman,Transfer and hub,6,0.98,5
+stgrsc,W24/25,136,BurJuman,Transfer and hub,6,0.98,5
