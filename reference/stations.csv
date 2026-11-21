@@ -1,0 +1,54 @@
+location_id,station,line,line_name_raw,primary_segment,is_junction_or_interchange,first_win
+128,centrepoint,Red,Red Metro Line,red,False,W17/18
+129,Emirates,Red,Red Metro Line,red,False,W17/18
+130,Airport Terminal 3,Red,Red Metro Line,red,False,W17/18
+131,Airport Terminal 1,Red,Red Metro Line,red,False,W17/18
+132,GGICO,Red,Red Metro Line,red,False,W17/18
+133,City Centre Deira,Red,Red Metro Line,red,False,W17/18
+134,Al Rigga,Red,Red Metro Line,red,False,W17/18
+135,Union,Red,Red Metro Line,red,True,W17/18
+136,BurJuman,Red,Red Metro Line,red,True,W17/18
+137,ADCB,Red,Red Metro Line,red,False,W17/18
+138,max,Red,Red Metro Line,red,False,W17/18
+139,World Trade Centre,Red,Red Metro Line,red,False,W17/18
+140,Emirates Towers,Red,Red Metro Line,red,False,W17/18
+141,Financial Centre,Red,Red Metro Line,red,False,W17/18
+142,Burj Khalifa/ Dubai Mall,Red,Red Metro Line,red,False,W17/18
+143,Business Bay,Red,Red Metro Line,red,False,W17/18
+146,ONPASSIVE,Red,Red Metro Line,red,False,W17/18
+148,Equiti,Red,Red Metro Line,red,False,W17/18
+149,Mall of the Emirates,Red,Red Metro Line,red,False,W17/18
+150,Mashreq,Red,Red Metro Line,red,False,W17/18
+151,Dubai Internet City,Red,Red Metro Line,red,False,W17/18
+152,Al Khail,Red,Red Metro Line,red,False,W17/18
+153,Sobha Realty,Red,Red Metro Line,red,False,W17/18
+154,DMCC,Red,Red Metro Line,red,False,W17/18
+155,Jabal Ali,Red,Red Metro Line,red,True,W17/18
+156,Ibn Battuta,Red,Red Metro Line,red_branch,False,W17/18
+157,Energy,Red,Red Metro Line,red_branch,False,W17/18
+158,Danube,Red,Red Metro Line,red_branch,False,W17/18
+159,UAE Exchange,Red,Red Metro Line,red_branch,False,W17/18
+160,Etisalat,Green,Green Metro Line,green,False,W17/18
+161,Al Qusais,Green,Green Metro Line,green,False,W17/18
+162,Dubai Airport Free Zone,Green,Green Metro Line,green,False,W17/18
+163,Al Nahda,Green,Green Metro Line,green,False,W17/18
+164,Stadium,Green,Green Metro Line,green,False,W17/18
+165,Al Qiyadah,Green,Green Metro Line,green,False,W17/18
+166,Abu Hail,Green,Green Metro Line,green,False,W17/18
+167,Abu Baker Al Siddique,Green,Green Metro Line,green,False,W17/18
+168,Salah Al Din,Green,Green Metro Line,green,False,W17/18
+170,Baniyas Square,Green,Green Metro Line,green,False,W17/18
+171,Gold Souq,Green,Green Metro Line,green,False,W17/18
+172,Al Ras,Green,Green Metro Line,green,False,W17/18
+173,Al Ghubaiba,Green,Green Metro Line,green,False,W17/18
+174,Sharaf DG,Green,Green Metro Line,green,False,W17/18
+176,Oud Metha,Green,Green Metro Line,green,False,W17/18
+177,Dubai Healthcare City,Green,Green Metro Line,green,False,W17/18
+178,Al Jadaf,Green,Green Metro Line,green,False,W17/18
+179,Creek,Green,Green Metro Line,green,False,W17/18
+181,The Gardens,Red,Red Metro Line,red_2020,False,W21/22
+182,Discovery Gardens,Red,Red Metro Line,red_2020,False,W21/22
+183,Al Furjan,Red,Red Metro Line,red_2020,False,W21/22
+184,Jumeirah Golf Estates,Red,Red Metro Line,red_2020,False,W21/22
+185,Dubai Investment Park,Red,Red Metro Line,red_2020,False,W21/22
+187,EXPO,Red,Red Metro Line,red_2020,False,W21/22

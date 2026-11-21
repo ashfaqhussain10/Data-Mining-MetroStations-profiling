@@ -12,7 +12,7 @@ BITS Pilani Dubai, CS F415 Data Mining, Semester I 2026-27. Team: Chaitanya Nark
 | Raw data, 10 parts (10.5 million rows) | Done: local `data/raw/` and S3 |
 | AWS pipeline (S3, Glue, Athena) | Done, including the feature table; matches the local build exactly |
 | Feature table (244 rows x 17 features) | Done: built in Athena, exported to `results/features/features.parquet` |
-| Station graph (`edges.csv`) | Not started. Waits on station order and the link-weight decision |
+| Station graph (`edges.csv`) | Done: `reference/` holds `stations.csv`, `line_order.csv` and `edges.csv` (244 spatial + 191 temporal links), built by `scripts/build_stations.py` and `scripts/build_edges.py` |
 | Validation labels | Done: 12 web-sourced labels in `results/hand_labels.csv` |
 | Five clustering methods and evaluation | Ward done: `notebooks/04_ward.ipynb` |
 
@@ -245,6 +245,28 @@ Clustering has no answer key, so 12 well-known stations were given an expected t
 
 ## Model input and output
 
+**Input, all five methods:** Athena's `features` table, read from `s3://<bucket>/curated/features/`, a 244 x 17 matrix of z-scored features. Every method uses the same matrix so results compare directly. The key columns identify rows and are not used for clustering.
+
+**Extra input, ST-GRSC only:** a station-window graph, planned as `edges.csv`:
+
+- spatial links between neighbouring stations on the same line, within a window;
+- temporal links between the same station in consecutive windows (the weighting across the 2- and 3-year gaps is still to be decided).
+
+| Method | Uses the graph |
+|---|---|
+| K-means | no |
+| Hierarchical (Ward) | no |
+| DBSCAN | no |
+| Spectral clustering (graph weight off) | no |
+| ST-GRSC (proposed) | yes |
+
+**Output, planned format, same for every method:** one row per station-window with `win`, `location_id`, `station`, `method`, the settings used (for example `k`, `alpha`) and the assigned `cluster`. DBSCAN marks outliers as noise. From these labels:
+
+- five metrics: silhouette, Davies-Bouldin, Calinski-Harabasz, SSE, and ARI stability over 100 resamples of 80% of rows;
+- the ablation: no graph, spatial links only, temporal links only, both;
+- cluster profiles, a station-by-window type table, and the list of stations that changed type;
+- a check against the 12 validation labels in `results/hand_labels.csv`.
+
 ## Results
 
 ## Hierarchical( Ward) 
@@ -283,30 +305,6 @@ so it is a single observation rather than a trend.
 Outputs: `results/labels/ward.parquet`, `results/metrics/ward_k_sweep.csv`,
 `ward_cluster_profiles.csv`, `ward_stability.csv`, `ward_vs_hand_labels.csv`,
 and four figures under `figures/ward_*.png`.
-
-
-**Input, all five methods:** Athena's `features` table, read from `s3://<bucket>/curated/features/`, a 244 x 17 matrix of z-scored features. Every method uses the same matrix so results compare directly. The key columns identify rows and are not used for clustering.
-
-**Extra input, ST-GRSC only:** a station-window graph, planned as `edges.csv`:
-
-- spatial links between neighbouring stations on the same line, within a window;
-- temporal links between the same station in consecutive windows (the weighting across the 2- and 3-year gaps is still to be decided).
-
-| Method | Uses the graph |
-|---|---|
-| K-means | no |
-| Hierarchical (Ward) | no |
-| DBSCAN | no |
-| Spectral clustering (graph weight off) | no |
-| ST-GRSC (proposed) | yes |
-
-**Output, planned format, same for every method:** one row per station-window with `win`, `location_id`, `station`, `method`, the settings used (for example `k`, `alpha`) and the assigned `cluster`. DBSCAN marks outliers as noise. From these labels:
-
-- five metrics: silhouette, Davies-Bouldin, Calinski-Harabasz, SSE, and ARI stability over 100 resamples of 80% of rows;
-- the ablation: no graph, spatial links only, temporal links only, both;
-- cluster profiles, a station-by-window type table, and the list of stations that changed type;
-- a check against the 12 validation labels in `results/hand_labels.csv`.
-
 
 
 ## Running it

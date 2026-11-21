@@ -1,0 +1,58 @@
+segment,position,location_id,station
+red,1,128,centrepoint
+red,2,129,Emirates
+red,3,130,Airport Terminal 3
+red,4,131,Airport Terminal 1
+red,5,132,GGICO
+red,6,133,City Centre Deira
+red,7,134,Al Rigga
+red,8,135,Union
+red,9,136,BurJuman
+red,10,137,ADCB
+red,11,138,max
+red,12,139,World Trade Centre
+red,13,140,Emirates Towers
+red,14,141,Financial Centre
+red,15,142,Burj Khalifa/ Dubai Mall
+red,16,143,Business Bay
+red,17,146,ONPASSIVE
+red,18,148,Equiti
+red,19,149,Mall of the Emirates
+red,20,150,Mashreq
+red,21,151,Dubai Internet City
+red,22,152,Al Khail
+red,23,153,Sobha Realty
+red,24,154,DMCC
+red,25,155,Jabal Ali
+red_branch,1,155,Jabal Ali
+red_branch,2,156,Ibn Battuta
+red_branch,3,157,Energy
+red_branch,4,158,Danube
+red_branch,5,159,UAE Exchange
+red_2020,1,155,Jabal Ali
+red_2020,2,181,The Gardens
+red_2020,3,182,Discovery Gardens
+red_2020,4,183,Al Furjan
+red_2020,5,184,Jumeirah Golf Estates
+red_2020,6,185,Dubai Investment Park
+red_2020,7,187,EXPO
+green,1,160,Etisalat
+green,2,161,Al Qusais
+green,3,162,Dubai Airport Free Zone
+green,4,163,Al Nahda
+green,5,164,Stadium
+green,6,165,Al Qiyadah
+green,7,166,Abu Hail
+green,8,167,Abu Baker Al Siddique
+green,9,168,Salah Al Din
+green,10,135,Union
+green,11,170,Baniyas Square
+green,12,171,Gold Souq
+green,13,172,Al Ras
+green,14,173,Al Ghubaiba
+green,15,174,Sharaf DG
+green,16,136,BurJuman
+green,17,176,Oud Metha
+green,18,177,Dubai Healthcare City
+green,19,178,Al Jadaf
+green,20,179,Creek
