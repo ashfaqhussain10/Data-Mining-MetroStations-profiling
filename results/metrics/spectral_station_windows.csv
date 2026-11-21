@@ -1,0 +1,54 @@
+station_key,station,W17/18,W18/19,W19/20,W21/22,W24/25
+128,centrepoint,1.0,1.0,1.0,2.0,1.0
+129,Emirates,0.0,0.0,0.0,0.0,0.0
+130,Airport Terminal 3,5.0,5.0,5.0,5.0,5.0
+131,Airport Terminal 1,5.0,5.0,5.0,5.0,5.0
+132,GGICO,0.0,0.0,0.0,0.0,0.0
+133,City Centre Deira,3.0,3.0,3.0,3.0,3.0
+134,Al Rigga,1.0,1.0,1.0,1.0,1.0
+135,Union,1.0,1.0,1.0,3.0,1.0
+136,BurJuman,1.0,1.0,1.0,1.0,1.0
+137,ADCB,1.0,1.0,1.0,1.0,1.0
+138,max,1.0,1.0,1.0,2.0,1.0
+139,World Trade Centre,4.0,4.0,4.0,4.0,4.0
+140,Emirates Towers,4.0,4.0,0.0,2.0,4.0
+141,Financial Centre,4.0,4.0,2.0,2.0,4.0
+142,Burj Khalifa/ Dubai Mall,3.0,3.0,3.0,3.0,3.0
+143,Business Bay,0.0,0.0,0.0,0.0,0.0
+146,ONPASSIVE,4.0,4.0,2.0,2.0,2.0
+148,Equiti,0.0,0.0,0.0,0.0,0.0
+149,Mall of the Emirates,3.0,3.0,3.0,3.0,3.0
+150,Mashreq,2.0,2.0,2.0,2.0,1.0
+151,Dubai Internet City,4.0,2.0,2.0,2.0,2.0
+152,Al Khail,0.0,0.0,0.0,0.0,0.0
+153,Sobha Realty,4.0,4.0,3.0,3.0,3.0
+154,DMCC,4.0,0.0,0.0,3.0,0.0
+155,Jabal Ali,5.0,,,2.0,0.0
+156,Ibn Battuta,4.0,1.0,3.0,3.0,3.0
+157,Energy,2.0,,3.0,3.0,2.0
+158,Danube,2.0,2.0,2.0,2.0,2.0
+159,UAE Exchange,0.0,0.0,0.0,0.0,0.0
+160,Etisalat,1.0,2.0,2.0,2.0,2.0
+161,Al Qusais,4.0,4.0,4.0,4.0,4.0
+162,Dubai Airport Free Zone,1.0,1.0,1.0,2.0,1.0
+163,Al Nahda,1.0,1.0,1.0,2.0,1.0
+164,Stadium,1.0,1.0,1.0,2.0,1.0
+165,Al Qiyadah,4.0,4.0,2.0,2.0,1.0
+166,Abu Hail,1.0,1.0,1.0,2.0,1.0
+167,Abu Baker Al Siddique,1.0,1.0,1.0,1.0,1.0
+168,Salah Al Din,1.0,1.0,1.0,1.0,1.0
+170,Baniyas Square,4.0,4.0,3.0,3.0,3.0
+171,Gold Souq,1.0,1.0,1.0,3.0,3.0
+172,Al Ras,4.0,4.0,4.0,3.0,4.0
+173,Al Ghubaiba,3.0,3.0,3.0,3.0,3.0
+174,Sharaf DG,1.0,1.0,1.0,1.0,1.0
+176,Oud Metha,4.0,2.0,2.0,2.0,2.0
+177,Dubai Healthcare City,0.0,0.0,0.0,0.0,0.0
+178,Al Jadaf,2.0,0.0,2.0,2.0,2.0
+179,Creek,0.0,0.0,0.0,0.0,0.0
+181,The Gardens,,,,1.0,1.0
+182,Discovery Gardens,,,,2.0,2.0
+183,Al Furjan,,,,2.0,1.0
+184,Jumeirah Golf Estates,,,,2.0,2.0
+185,Dubai Investment Park,,,,2.0,2.0
+187,EXPO,,,,3.0,0.0
