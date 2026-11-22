@@ -1,0 +1,10 @@
+method,clusters,noise,silhouette,davies_bouldin,calinski_harabasz,sse,stability_ari,stability_sd,stations_changing,switches,note
+K-means (k=6),6,0,0.2696,1.3129,90.8593,1426.0136,0.9324,0.0376,16,27,
+Ward (k=6),6,0,0.2785,1.3151,81.7876,1525.9942,0.7522,0.1227,8,10,
+"GMM (k=6, diag)",6,0,0.1965,1.5217,85.3678,1484.907,0.7498,0.0851,10,17,
+Spectral (k=6),6,0,0.252,1.4792,77.5919,1577.1367,0.7153,0.1369,25,44,
+ST-GRSC (a=0.98),6,0,0.23,1.5113,72.6031,1642.5934,0.696,0.1526,26,46,
+BPGC (lambda=1),6,0,0.242,1.3316,82.0257,1523.1917,0.8191,0.0973,20,31,
+Adaptive BPGC (lambda=4),6,0,0.2318,1.4038,78.6755,1563.6032,0.759,0.0902,23,39,
+Leiden + mix (res=0.75),8,0,0.2176,1.3454,72.2367,1319.9201,0.8163,0.1035,12,17,proposed
+DBSCAN (labels file),2,33,0.2814,0.867,19.2554,2896.4766,,,11,15,"noise excluded from scores; not refitted, see 05_dbscan for its stability"

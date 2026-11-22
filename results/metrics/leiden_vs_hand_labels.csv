@@ -1,0 +1,13 @@
+station,expected_type,windows,communities,mean_top_share
+Airport Terminal 3,Airport,5,7/7/7/7/7,97
+Dubai Healthcare City,Business,5,3/3/3/3/3,100
+Financial Centre,Business,5,0/0/0/2/0,76
+Oud Metha,Education,5,4/4/4/4/4,84
+Al Rigga,Mixed,5,1/1/1/1/1,99
+DMCC,Mixed,5,0/0/0/0/0,96
+Stadium,Residential,5,1/1/1/1/1,93
+EXPO,Shopping and leisure,2,4/3,74
+Ibn Battuta,Shopping and leisure,5,5/5/5/4/4,93
+Mall of the Emirates,Shopping and leisure,5,4/4/5/5/5,74
+Al Ghubaiba,Transfer and hub,5,5/5/5/5/5,95
+BurJuman,Transfer and hub,5,1/1/1/1/1,99

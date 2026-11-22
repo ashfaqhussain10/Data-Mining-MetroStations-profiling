@@ -3,3 +3,10 @@ infra/config.local.sh
 .ipynb_checkpoints/
 __pycache__/
 .venv/
+
+# Chat exports can contain teammate login files: never commit
+*.zip
+
+# Loose documents shared in the team chat stay local
+/*.pdf
+/*.docx
